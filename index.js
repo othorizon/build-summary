@@ -1,11 +1,11 @@
 const process = require('child_process');
-const fs = require('fs')
+// const fs = require('fs')
 
 module.exports = {
     hooks: {
         init: function () {
             const root = this.resolve('')
-            // console.log('root: ' + root);
+            console.log('prcess generate summary ,root: ' + root);
             //直接调用命令
             process.execSync(root+"/node_modules/gitbook-plugin-build-summary/buildsummary.sh \""+root+"\"",
                 function (error, stdout, stderr) {
