@@ -9,7 +9,7 @@ module.exports = {
             //直接调用命令
             process.execSync(root+"/node_modules/gitbook-plugin-build-summary/buildsummary.sh \""+root+"\"",
                 function (error, stdout, stderr) {
-                    console.log('stdout: ' + stdout);
+                    console.log(stdout);
                     if (error !== null) {
                         // console.log('stdout: ' + stdout);
                         console.log('stderr: ' + stderr);
