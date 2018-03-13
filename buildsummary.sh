@@ -57,7 +57,7 @@ dive(){
     do
         if [ -d "${dir}" ];then
           nextnode=`getnode "${dir}" ${nextdepth}`
-          dive "`find ${dir} -maxdepth 1 \( -iname "*.md" -or -type d \)`" $nextdepth "${nextnode}"
+        #   dive "`find ${dir} -maxdepth 1 \( -iname "*.md" -or -type d \)`" $nextdepth "${nextnode}"
         else
           writeline "${dir}" ${nextdepth}
         fi
