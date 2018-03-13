@@ -57,7 +57,7 @@ dive(){
     do
         if [ -d "${dir}" ];then
           nextnode=`getnode "${dir}" ${nextdepth}`
-          dive "`find ${dir} \( -iname "\*.md" -or -type d \) -d 1`" $nextdepth "${nextnode}"
+          dive "`find ${dir} \( -iname "*.md" -or -type d \) -maxdepth 1`" $nextdepth "${nextnode}"
         else
           writeline "${dir}" ${nextdepth}
         fi
@@ -66,7 +66,7 @@ dive(){
 
 result=""
 
-dive "`find . \( -iname "\*.md" -or -type d \) ${ignore} -d 1`" 1
+dive "`find . \( -iname "*.md" -or -type d \) ${ignore} -maxdepth 1`" 1
 
 #写文件
 echo generate SUMMARY.md
