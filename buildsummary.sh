@@ -3,7 +3,7 @@
 root=$1
 cd $root
 
-ignore="! -iname 'README.MD' ! -iname 'SUMMARY.MD' ! -iname '_SUMMARY.MD' ! -path './.git' ! -path './node_modules'"
+ignore='! -iname "README.MD" ! -iname "SUMMARY.MD" ! -iname "_SUMMARY.MD" ! -path "./.git" ! -path "./node_modules"'
 
 getspcae(){
     tab=""
@@ -57,7 +57,7 @@ dive(){
     do
         if [ -d "${dir}" ];then
           nextnode=`getnode "${dir}" ${nextdepth}`
-          dive "`find ${dir} \( -iname '*.md' -or -type d \) -d 1`" $nextdepth "${nextnode}"
+          dive "`find ${dir} \( -iname "\*.md" -or -type d \) -d 1`" $nextdepth "${nextnode}"
         else
           writeline "${dir}" ${nextdepth}
         fi
@@ -66,7 +66,7 @@ dive(){
 
 result=""
 
-dive "`find . \( -iname '*.md' -or -type d \) ${ignore} -d 1`" 1
+dive "`find . \( -iname "\*.md" -or -type d \) ${ignore} -d 1`" 1
 
 #写文件
 echo generate SUMMARY.md
