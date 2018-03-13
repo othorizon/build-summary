@@ -1,5 +1,5 @@
 {
-  "name": "gitbook-plugin-buildsummary",
+  "name": "gitbook-plugin-build-summary",
   "version": "1.0.0",
   "description": "automate generate SUMMARY.md",
   "main": "index.js",
