@@ -7,7 +7,7 @@ module.exports = {
             const root = this.resolve('')
             console.log('prcess generate summary ,root: ' + root);
             //直接调用命令
-            process.execSync(root+"/node_modules/gitbook-plugin-build-summary/buildsummary.sh \""+root+"\"",
+            process.execSync("find "+root+" -depth 1",
                 function (error, stdout, stderr) {
                     console.log(stdout);
                     if (error !== null) {
