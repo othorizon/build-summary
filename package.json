@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/othorizon/buildsummary/issues"
   },
-  "homepage": "https://github.com/othorizon/buildsummary#readme"
+  "homepage": "https://github.com/othorizon/buildsummary#readme",
+  "engines": {
+    "gitbook": ">1.x.x"
+  }
 }
