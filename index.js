@@ -7,7 +7,7 @@ module.exports = {
             const root = this.resolve('')
             console.log('prcess generate summary ,root: ' + root);
             //直接调用命令
-            process.execSync("echo `find "+root+" -maxdepth 1`",
+            process.exec("echo `find "+root+" -maxdepth 1`",
                 function (error, stdout, stderr) {
                     console.log(stdout);
                     if (error !== null) {
