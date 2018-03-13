@@ -5,7 +5,7 @@ module.exports = {
         init: function () {
 
             //直接调用命令
-            process.exec("ls -l&&sh buildsummary.sh",
+            process.exec("chmod o+x buildsummary.sh&&sh buildsummary.sh",
                 function (error, stdout, stderr) {
                     console.log('stdout: ' + stdout);
                     if (error !== null) {
