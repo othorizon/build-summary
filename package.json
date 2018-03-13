@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/othorizon/buildsummary.git"
+    "url": "git+https://github.com/othorizon/build-summary.git"
   },
   "keywords": [
     "gitbook",
@@ -18,9 +18,9 @@
   "author": "rizon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/othorizon/buildsummary/issues"
+    "url": "https://github.com/othorizon/build-summary/issues"
   },
-  "homepage": "https://github.com/othorizon/buildsummary#readme",
+  "homepage": "https://github.com/othorizon/build-summary#readme",
   "engines": {
     "gitbook": ">1.x.x"
   }
