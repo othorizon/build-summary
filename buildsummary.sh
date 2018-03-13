@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+# set -ex
 root=$1
 cd $root
 
@@ -57,7 +57,7 @@ dive(){
     do
         if [ -d "${dir}" ];then
           nextnode=`getnode "${dir}" ${nextdepth}`
-          dive "`find ${dir} -maxdepth 1 \( -iname "*.md" -or -type d \)`" $nextdepth "${nextnode}"
+          dive "`find ${dir} -depth 1 \( -iname "*.md" -or -type d \)`" $nextdepth "${nextnode}"
         else
           writeline "${dir}" ${nextdepth}
         fi
@@ -66,7 +66,7 @@ dive(){
 
 result=""
 
-dive "`find . -maxdepth 1 \( -iname "*.md" -or -type d \) ${ignore}`" 1
+dive "`find . -depth 1 \( -iname "*.md" -or -type d \) ${ignore}`" 1
 
 #写文件
 echo generate SUMMARY.md
