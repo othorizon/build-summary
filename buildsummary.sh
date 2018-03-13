@@ -1,6 +1,7 @@
 #!/bin/bash
 #set -x
 root=$1
+cd $root
 
 ignore='! -iname "README.MD" ! -iname "SUMMARY.MD" ! -iname "_SUMMARY.MD" ! -path "./.git" ! -path "./node_modules"'
 
@@ -65,7 +66,7 @@ dive(){
 
 result=""
 
-dive "`find ${root} \( -iname "*.md" -or -type d \) ${ignore} -d 1`" 1
+dive "`find . \( -iname "*.md" -or -type d \) ${ignore} -d 1`" 1
 
 #写文件
 echo make SUMMARY.md
