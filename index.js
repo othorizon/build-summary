@@ -1,5 +1,5 @@
 const process = require('child_process');
-// const fs = require('fs')
+const fs = require('fs')
 
 module.exports = {
     hooks: {
@@ -17,7 +17,7 @@ module.exports = {
                     }
                 });
                 console.log("prcess generate finished");
-            // fs.writeFileSync( `${root}/SUMMARY.md`, stdout, { encoding: 'utf8' } )
+            fs.writeFileSync( `${root}/SUMMARY.md`, "etest", { encoding: 'utf8' } )
         }
     }
 }
