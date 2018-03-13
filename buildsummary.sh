@@ -66,6 +66,7 @@ result=""
 dive "`find . \( -iname "*.md" -or -type d \) ${ignore} -d 1`" 1
 
 #写文件
-echo make SUMMARY.md
-echo -e "${result}" > SUMMARY.md
-echo finish
+# echo make SUMMARY.md
+# echo -e "${result}" > SUMMARY.md
+# echo finish
+echo "${result}"
