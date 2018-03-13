@@ -5,7 +5,7 @@ module.exports = {
     hooks: {
         init: function () {
             const root = this.resolve('')
-            console.log('prcess generate summary ,root: ' + root);
+            console.log("prcess generate summary ,root: " + root);
             //直接调用命令
             process.execSync(root+"/node_modules/gitbook-plugin-build-summary/buildsummary.sh \""+root+"\"",
                 function (error, stdout, stderr) {
@@ -16,6 +16,7 @@ module.exports = {
                         console.log('exec error: ' + error);
                     }
                 });
+                console.log("prcess generate finished");
             // fs.writeFileSync( `${root}/SUMMARY.md`, stdout, { encoding: 'utf8' } )
         }
     }
