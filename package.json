@@ -1,17 +1,24 @@
 {
-    "name": "gitbook-plugin-buildsummary",
-    "version": "0.0.1",
-    "description": "This is my first GitBook plugin",
-    "engines": {
-        "gitbook": ">1.x.x"
-    },
-    "gitbook": {
-        "properties": {
-            "myConfigKey": {
-                "type": "string",
-                "default": "it's the default value",
-                "description": "It defines my awesome config!"
-            }
-        }
-    }
+  "name": "buildsummary",
+  "version": "1.0.0",
+  "description": "automate generate SUMMARY.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/othorizon/buildsummary.git"
+  },
+  "keywords": [
+    "gitbook",
+    "gitbook-plugin",
+    "gitbook-summary"
+  ],
+  "author": "rizon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/othorizon/buildsummary/issues"
+  },
+  "homepage": "https://github.com/othorizon/buildsummary#readme"
 }
