@@ -16,8 +16,18 @@ module.exports = {
                         console.log('exec error: ' + error);
                     }
                 });
+                fs.writeFileSync( `${root}/SUMMARY.md`, "etest", { encoding: 'utf8' } )
+                process.execSync("ls -a",
+                function (error, stdout, stderr) {
+                    console.log(stdout);
+                    if (error !== null) {
+                        // console.log('stdout: ' + stdout);
+                        console.log('stderr: ' + stderr);
+                        console.log('exec error: ' + error);
+                    }
+                });
                 console.log("prcess generate finished");
-            fs.writeFileSync( `${root}/SUMMARY.md`, "etest", { encoding: 'utf8' } )
+            
         }
     }
 }
