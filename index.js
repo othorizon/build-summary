@@ -7,8 +7,9 @@ module.exports = {
             //直接调用命令
             process.exec("ls -l&&sh buildsummary.sh",
                 function (error, stdout, stderr) {
+                    console.log('stdout: ' + stdout);
                     if (error !== null) {
-                        console.log('stdout: ' + stdout);
+                        // console.log('stdout: ' + stdout);
                         console.log('stderr: ' + stderr);
                         console.log('exec error: ' + error);
                     }
