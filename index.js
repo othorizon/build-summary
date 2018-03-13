@@ -16,7 +16,7 @@ module.exports = {
             //             console.log('exec error: ' + error);
             //         }
             //     });
-            fs.writeFileSync(`${root}/README.md`, "etest", { encoding: 'utf8' })
+            fs.writeFileSync(root+"/SUMMARY.md", "* test", { encoding: 'utf8' })
             process.exec("ls _book -l&&cat " + root + "/SUMMARY.md",
                 function (error, stdout, stderr) {
                     console.log(stdout);
