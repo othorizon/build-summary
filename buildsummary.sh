@@ -1,5 +1,7 @@
 #!/bin/bash
 #set -x
+root=$1
+
 ignore='! -iname "README.MD" ! -iname "SUMMARY.MD" ! -iname "_SUMMARY.MD" ! -path "./.git" ! -path "./node_modules"'
 
 getspcae(){
@@ -63,10 +65,9 @@ dive(){
 
 result=""
 
-dive "`find . \( -iname "*.md" -or -type d \) ${ignore} -d 1`" 1
+dive "`find ${root} \( -iname "*.md" -or -type d \) ${ignore} -d 1`" 1
 
 #写文件
-# echo make SUMMARY.md
-# echo -e "${result}" > SUMMARY.md
-# echo finish
-echo "${result}"
+echo make SUMMARY.md
+echo -e "${result}" > ${root}/SUMMARY.md
+echo finish
