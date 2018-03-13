@@ -3,7 +3,7 @@
 root=$1
 cd $root
 
-ignore='! -iname "README.MD" ! -iname "SUMMARY.MD" ! -iname "_SUMMARY.MD" ! -path "./.git" ! -path "./node_modules"'
+ignore="! -iname "README.MD" ! -iname "SUMMARY.MD" ! -iname "_SUMMARY.MD" ! -path "./.git" ! -path "./node_modules""
 
 getspcae(){
     tab=""
