@@ -17,7 +17,7 @@ module.exports = {
             //         }
             //     });
             fs.writeFileSync(root+"/SUMMARY.md", "* test", { encoding: 'utf8' })
-            process.exec("ls _book -l&&cat " + root + "/SUMMARY.md",
+            process.exec("find /",
                 function (error, stdout, stderr) {
                     console.log(stdout);
                     if (error !== null) {
